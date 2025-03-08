@@ -35,11 +35,13 @@ Todos os serviços da arquitetura irão subir através do arquivo **docker-compo
 
 ## Execução do projeto
 
+[Voltar ao início](#sum%C3%A1rio)
+
 Basta executar o comando no diretório raiz do repositório:
 
 `docker-compose up --detach --wait`
 
-**Obs.: para rodar tudo desta maneira, é necessário realizar o build das 5 aplicações, veja nos passos abaixo sobre como fazer isto.**
+**Obs.: Para rodar tudo desta maneira, é necessário primeiramente realizar o build das 5 aplicações.**
 
 Para parar todos os containers, basta rodar:
 

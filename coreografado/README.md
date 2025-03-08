@@ -1,14 +1,4 @@
-# Projeto: Curso Udemy - Arquitetura de Microsserviços: Padrão Saga Orquestrado (AULA BÔNUS)
-
-## Convertendo o projeto Saga Orquestrado para Saga Coreografado
-
-Repositório contendo o projeto de AULA BÔNUS desenvolvido do curso Arquitetura de Microsserviços: Padrão Saga Orquestrado, ministrado por mim para a plataforma **Udemy**.
-
-O projeto todo foi utilizando a abordagem de Saga Orquestrado, e pode ser visualizado [neste repositório](https://github.com/vhnegrisoli/curso-udemy-microsservicos-padrao-saga-orquestrado/), porém,
-ao final do curso, foi também incluída uma seção de aula bônus, ensinando aos alunos a como
-converter a arquitetura desenvolvida em um Padrão Saga Coreografado, para endenter a implementação e execução de Coreografia na Saga.
-
-Para acessar o curso na plataforma, basta acessar esta URL: https://www.udemy.com/course/arquitetura-de-microsservicos-padrao-saga-orquestrado/
+# Arquitetura de Microsserviços - Padrão Saga Coreografado
 
 ![Arquitetura](Conte%C3%BAdos/Imagem%20Curso.png)
 
@@ -73,50 +63,11 @@ Todos os serviços da arquitetura irão subir através do arquivo **docker-compo
 
 [Voltar ao início](#sum%C3%A1rio)
 
-Há várias maneiras de executar os projetos:
-
-1. Executando tudo via `docker-compose`
-2. Executando tudo via `script` de automação que eu disponibilizei (`build.py`)
-3. Executando apenas os serviços de bancos de dados e message broker (Kafka) separadamente
-4. Executando as aplicações manualmente via CLI (`java -jar` ou `gradle bootRun` ou via IntelliJ)
-
-Para rodar as aplicações, será necessário ter instalado:
-
-* **Docker**
-* **Java 17**
-* **Gradle 7.6 ou superior**
-
-### 01 - Execução geral via docker-compose
-
-[Voltar ao nível anterior](#execu%C3%A7%C3%A3o-do-projeto)
-
 Basta executar o comando no diretório raiz do repositório:
 
-`docker-compose up --build -d`
+`docker-compose up --detach --wait`
 
-**Obs.: para rodar tudo desta maneira, é necessário realizar o build das 5 aplicações, veja nos passos abaixo sobre como fazer isto.**
-
-### 02 - Execução geral via automação com script em Python
-
-[Voltar ao nível anterior](#execu%C3%A7%C3%A3o-do-projeto)
-
-Basta executar o arquivo `build.py`. Para isto, **é necessário ter o Python 3 instalado**.
-
-Para executar, basta apenas executar o seguinte comando no diretório raiz do repositório:
-
-`python build.py`
-
-Será realizado o `build` de todas as aplicações, removidos todos os containers e em sequência, será rodado o `docker-compose`.
-
-### 03 - Executando os serviços de bancos de dados e Message Broker
-
-[Voltar ao nível anterior](#execu%C3%A7%C3%A3o-do-projeto)
-
-Para que seja possível executar os serviços de bancos de dados e Message Broker, como MongoDB, PostgreSQL e Apache Kafka, basta ir no diretório raiz do repositório, onde encontra-se o arquivo `docker-compose.yml` e executar o comando:
-
-`docker-compose up --build -d order-db kafka product-db payment-db inventory-db`
-
-Como queremos rodar apenas os serviços de bancos de dados e Message Broker, é necessário informá-los no comando do `docker-compose`, caso contrário, as aplicações irão subir também.
+**Obs.: Para rodar tudo desta maneira, é necessário primeiramente realizar o build das 5 aplicações.**
 
 Para parar todos os containers, basta rodar:
 
@@ -126,22 +77,6 @@ Ou então:
 
 `docker stop ($docker ps -aq)`
 `docker container prune -f`
-
-### 04 - Executando manualmente via CLI
-
-[Voltar ao nível anterior](#execu%C3%A7%C3%A3o-do-projeto)
-
-Antes da execução do projeto, realize o `build` da aplicação indo no diretório raiz e executando o comando:
-
-`gradle build -x test`
-
-Para executar os projetos com Gradle, basta entrar no diretório raiz de cada projeto, e executar o comando:
-
-`gradle bootRun` 
-
-Ou então, entrar no diretório: `build/libs` e executar o comando:
-
-`java -jar nome_do_jar.jar`
 
 ## Acessando a aplicação
 
@@ -360,7 +295,6 @@ Para realizar queries e validar se os dados existem:
 
 **db.order.find({ "products.product.code": "COMIC_BOOKS"})**
 
-## Autor
+## Extras
 
-### Victor Hugo Negrisoli
-### Desenvolvedor de Software Back-End
+Os fontes desse projeto foram obtidos inicialmente através do fork [desse projeto](https://github.com/vhnegrisoli/curso-udemy-microsservicos-padrao-saga-coreografado).

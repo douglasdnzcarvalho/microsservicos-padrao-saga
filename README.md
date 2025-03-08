@@ -19,6 +19,8 @@ Ambas as aplicações consistem num conjunto de microsserviços que fazem o regi
 * **IntelliJ IDEA Community Edition**
 * **Gradle**
 
+**Observação:** Infelizmente o IntelliJ apresenta algumas limitações ao abrir projetos monorepo, sendo assim recomendo que abra a pasta [orquestrado](/orquestrado) e a [coreografado](/coreografado) como dois projetos separados.
+
 Espero que este projeto seja útil para você! Se tiver alguma dúvida ou precisar de ajuda, não hesite em entrar em contato!
 
 Material de estudo extra:
