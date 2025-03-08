@@ -1,23 +1,25 @@
+<!-- omit from toc -->
 # Arquitetura de Microsserviços - Padrão Saga Orquestrado
 
 ![Arquitetura](docs/Imagem%20Curso.png)
 
+<!-- omit from toc -->
 ### Sumário:
 
-* [Arquitetura Proposta](#arquitetura-proposta)
-* [Execução do projeto](#execu%C3%A7%C3%A3o-do-projeto)
-* [Acessando a aplicação](#acessando-a-aplica%C3%A7%C3%A3o)
-* [Acessando tópicos com Redpanda Console](#acessando-t%C3%B3picos-com-redpanda-console)
-* [Dados da API](#dados-da-api)
-  * [Produtos registrados e seu estoque](#produtos-registrados-e-seu-estoque)
-  * [Endpoint para iniciar a saga](#endpoint-para-iniciar-a-saga)
-  * [Endpoint para visualizar a saga](#endpoint-para-visualizar-a-saga)
-  * [Acesso ao MongoDB](#acesso-ao-mongodb)
-* [Extras](#extras)
+- [Arquitetura Proposta](#arquitetura-proposta)
+- [Execução do projeto](#execução-do-projeto)
+- [Acessando a aplicação](#acessando-a-aplicação)
+- [Acessando tópicos com Redpanda Console](#acessando-tópicos-com-redpanda-console)
+- [Dados da API](#dados-da-api)
+  - [Produtos registrados e seu estoque](#produtos-registrados-e-seu-estoque)
+  - [Endpoint para iniciar a saga:](#endpoint-para-iniciar-a-saga)
+  - [Endpoint para visualizar a saga:](#endpoint-para-visualizar-a-saga)
+  - [Acesso ao MongoDB](#acesso-ao-mongodb)
+- [Extras](#extras)
 
-# Arquitetura Proposta
+## Arquitetura Proposta
 
-[Voltar ao início](#sum%C3%A1rio)
+[Voltar ao início](#sumário)
 
 No curso, desenvolveremos a seguinte aquitetura:
 
@@ -35,7 +37,7 @@ Todos os serviços da arquitetura irão subir através do arquivo **docker-compo
 
 ## Execução do projeto
 
-[Voltar ao início](#sum%C3%A1rio)
+[Voltar ao início](#sumário)
 
 Basta executar o comando no diretório raiz do repositório:
 
@@ -54,7 +56,7 @@ Ou então:
 
 ## Acessando a aplicação
 
-[Voltar ao início](#sum%C3%A1rio)
+[Voltar ao início](#sumário)
 
 Para acessar as aplicações e realizar um pedido, basta acessar a URL:
 
@@ -80,7 +82,7 @@ As aplicações executarão nas seguintes portas:
 
 ## Acessando tópicos com Redpanda Console
 
-[Voltar ao início](#sum%C3%A1rio)
+[Voltar ao início](#sumário)
 
 Para acessar o Redpanda Console e visualizar tópicos e publicar eventos, basta acessar:
 
@@ -92,7 +94,7 @@ Você chegará nesta página:
 
 ## Dados da API
 
-[Voltar ao início](#sum%C3%A1rio)
+[Voltar ao início](#sumário)
 
 É necessário conhecer o payload de envio ao fluxo da saga, assim como os produtos cadastrados e suas quantidades.
 
@@ -242,7 +244,7 @@ Resposta:
 
 ### Acesso ao MongoDB
 
-[Voltar ao início](#sum%C3%A1rio)
+[Voltar ao início](#sumário)
 
 Para conectar-se ao MongoDB via linha de comando (cli) diretamente do docker-compose, basta executar o comando abaixo:
 
